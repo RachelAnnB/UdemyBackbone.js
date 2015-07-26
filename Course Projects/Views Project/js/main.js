@@ -97,12 +97,14 @@ var VehiclesView = Backbone.View.extend({
     },
 
 	render: function(){
-		var self = this;
 
-		this.model.each(function(vehicle){
-			var vehiclesview = new VehiclesView({ model: car });
-			self.$el.append(vehiclesview.render().$el);
-		});
+		this.collection.each(function(vehicleModel){
+			var vehicleview = new VehicleView({
+                model: vehicleModel 
+            });
+
+            this.$el.append(vehicleView.render().$el);
+		}, this);
 
 		return this;
 	}
@@ -112,10 +114,17 @@ var vehicles = new Vehicles([
 	new Vehicle({ car: "Car 1", registrationNumber: "XLI887" }),
 	new Vehicle({ car: "Car 2", registrationNumber: "ZNP123" }),
 	new Vehicle({ car: "Car 3", registrationNumber: "XUV456" })
-	]);
+]);
 
-var vehicleView = new VehicleView({ el: "#vehicles", model: car });
-vehicleView.render();
+//var vehicleView = new VehicleView({ el: "#vehicles", model: car });
+//vehicleView.render();
 
-var vehiclesView = new VehiclesView({ el: "#vehicles", model: car});
+//var vehicleView = new VehicleView({
+//    collection: vehicle
+//});
+//vehicleView.render();
+
+var vehiclesView = new VehiclesView({
+    collection: vehicles
+});
 vehiclesView.render();
