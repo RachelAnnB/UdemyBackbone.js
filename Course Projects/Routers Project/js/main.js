@@ -7,7 +7,7 @@ var CarsView = Backbone.View.extend({
     }
 });
 
-varBoatsView = Backbone.View.extend({
+var BoatsView = Backbone.View.extend({
     render: function(){
         this.$el.html("BOATS VIEW");
         
@@ -15,7 +15,7 @@ varBoatsView = Backbone.View.extend({
     }
 });
 
-varMotorcyclesView = Backbone.View.extend({
+var MotorcyclesView = Backbone.View.extend({
     render: function(){
         this.$el.html("MOTORCYCLES VIEW");
         
@@ -23,7 +23,7 @@ varMotorcyclesView = Backbone.View.extend({
     }
 });
 
-varObjectView = Backbone.View.extend({
+var ObjectView = Backbone.View.extend({
     render: function(){
         this.$el.html("OBJECT VIEW");
         
