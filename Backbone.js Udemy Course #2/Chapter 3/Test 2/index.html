@@ -9,26 +9,24 @@
 <body>
 
   <div class="site">
+
     <div class="logo">  
       <img src="images/site/logo.png" width="207" height="124" alt="Hansel and Petal" />
     </div>
+    
+    <h1>State Flowers</h1>
 
-    <div id="allFlowers">
-      <script id="flowerElement" type="text/template">
-      <a href="#<%= link %>"><img src="<%= img %>" alt="<%= name %>" class="image" /></a>
+    <div id="stateFlowers"></div>
+    
+  </div> 
+
+    <script id="stateFlowerElement" type="text/template">
       <ul>
-        <li class="flowerInfo">Name:<%= name %></li>
-        <li class="flowerInfo">Price:<%= price %></li>
-        <li class="flowerInfo">Color:<%= color %></li>
+        <li class="stateFlowerStyle">State: <%= state %></li>
+        <li class="stateFlowerStyel">Flower: <%= flower %></li>
       </ul>
-      </script>
-      
-    </div>
-    
-  <div id="copy"></div>
+    </script>
 
-    
-  </div>  
 
   <script src="js/libs/jquery.js"></script>
   <script src="js/libs/underscore.js"></script>
